@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auralixo</title>
+<meta name="description" content="Auralixo is a mobile app for Android. Download it from Google Play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mist: #ECE8F7;
+    --ink: #1C1646;
+    --violet: #5B3FE0;
+    --peach: #FFB59E;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    background: var(--mist);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  a { color: var(--violet); }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero: concentric rings = the "aura" */
+  .hero { position: relative; overflow: hidden; padding: 96px 0 80px; }
+  .rings {
+    position: absolute; right: -140px; top: 50%; width: 560px; height: 560px;
+    transform: translateY(-50%); pointer-events: none;
+    background:
+      radial-gradient(circle, var(--peach) 0 12%, transparent 12.5%),
+      repeating-radial-gradient(circle, transparent 0 7%, rgba(91,63,224,.28) 7% 7.6%);
+    border-radius: 50%;
+    animation: pulse 6s ease-in-out infinite;
+  }
+  @keyframes pulse { 50% { transform: translateY(-50%) scale(1.06); } }
+  @media (prefers-reduced-motion: reduce) { .rings { animation: none; } }
+  .hero .wrap { position: relative; }
+  h1 { font-size: clamp(3.2rem, 11vw, 7rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+  .tagline { font-size: 1.3rem; max-width: 30ch; margin: 20px 0 32px; }
+  .btn {
+    display: inline-block; background: var(--ink); color: var(--white);
+    padding: 14px 26px; border-radius: 999px; font-weight: 600; text-decoration: none;
+  }
+  .btn:hover { background: var(--violet); }
+
+  section { padding: 56px 0; }
+  h2 { font-size: 1.8rem; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .features { list-style: none; padding: 0; max-width: 60ch; }
+  .features li { padding: 16px 0; border-top: 1px solid rgba(28,22,70,.2); }
+  .features strong { display: block; font-size: 1.1rem; }
+  .panel { background: var(--white); border-radius: 24px; padding: 32px; max-width: 60ch; }
+  footer { padding: 40px 0 56px; font-size: .95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="rings" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Auralixo</h1>
+    <p class="tagline">Replace this line with one sentence about what Auralixo does for you.</p>
+    <!-- Replace # with your Google Play link after your app is published -->
+    <a class="btn" href="#">Get it on Google Play</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>What you can do</h2>
+      <ul class="features">
+        <li><strong>Feature one</strong>Describe it in one plain sentence.</li>
+        <li><strong>Feature two</strong>Describe it in one plain sentence.</li>
+        <li><strong>Feature three</strong>Describe it in one plain sentence.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="panel">
+        <h2>Privacy</h2>
+        <p>Auralixo respects your privacy. Replace this text with what data your app collects, how you use it, and that Google AdMob may show ads and use an advertising ID. For the full policy, see the <a href="https://sufi-apps.github.io/auralixo-privacy-policy/">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Questions or feedback? Email <a href="mailto:sufiapps90@gmail.com">sufiapps90@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Auralixo</span>
+    <a href="https://sufi-apps.github.io/auralixo-privacy-policy/">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
